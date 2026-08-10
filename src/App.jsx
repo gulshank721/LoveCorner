@@ -6,6 +6,7 @@ import floralPhoto from './assets/neha-floral.jpeg';
 import treePhoto from './assets/neha-under-tree.jpeg';
 import sunlightPhoto from './assets/neha-sunlight.jpeg';
 import meByTheSeaPhoto from './assets/me-by-the-sea.jpeg';
+import thoughtVideo from './assets/i_have_this_thoughts_in_my_min.mp4';
 
 const Sparkle = () => (
   <span className="sparkle" aria-hidden="true">
@@ -303,6 +304,17 @@ export default function App() {
               <span className="star">✦</span>
               <span className="star">✧</span>
               <span className="star">✦</span>
+            </div>
+            <div className="celestial-video-frame" aria-hidden={false}>
+              <video
+                className="celestial-video-player"
+                src={thoughtVideo}
+                controls
+                playsInline
+                preload="metadata"
+                poster={meByTheSeaPhoto}
+                aria-label="A short celestial video"
+              />
             </div>
           </div>
           <div className="signature">

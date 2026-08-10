@@ -160,4 +160,35 @@
     width: 280px;
     height: 280px;
   }
+  .celestial-video-frame {
+    max-width: 100%;
+    padding: 4px;
+  }
+  .celestial-video-player {
+    border-radius: 8px;
+  }
+}
+.celestial-video-frame {
+  max-width: 640px;
+  margin: 20px auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 6px;
+}
+.celestial-video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  border-radius: 10px;
+}
+.celestial-video-player:focus {
+  outline: 3px solid rgba(255, 220, 180, 0.18);
 }
