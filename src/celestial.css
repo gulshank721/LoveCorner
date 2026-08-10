@@ -1,0 +1,163 @@
+.celestial-card {
+  margin: 32px auto 0;
+  padding: 30px 28px 28px;
+  background:
+    radial-gradient(circle at top, #ffffff12, #ffffff05 35%, transparent 60%),
+    linear-gradient(145deg, #3a1d39 15%, #1b0b1e 65%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 34px;
+  box-shadow: 0 25px 70px #0009;
+  overflow: hidden;
+  position: relative;
+}
+.celestial-copy {
+  max-width: 520px;
+  margin: 0 auto 24px;
+  text-align: left;
+}
+.celestial-copy h2 {
+  font:
+    600 clamp(2rem, 4vw, 3rem)/1.05 'Playfair Display',
+    serif;
+  color: #ffe9ca;
+  margin: 0 0 14px;
+}
+.celestial-copy p {
+  font:
+    400 18px/1.7 'Playfair Display',
+    serif;
+  color: #f3ddd4;
+  margin: 0;
+}
+.celestial-orbit {
+  position: relative;
+  width: min(360px, 100%);
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.08);
+}
+.celestial-core {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: grid;
+  place-items: center;
+}
+.celestial-core::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 45% 40%,
+    rgba(255, 225, 190, 0.45) 0,
+    transparent 45%
+  );
+  filter: blur(14px);
+  opacity: 0.7;
+}
+.central-moon {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 0 40px rgba(255, 233, 202, 0.35);
+  position: relative;
+  z-index: 2;
+  animation: moonPulse 6s ease-in-out infinite;
+}
+.orbit-planet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 66px;
+  height: 66px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 25px #0008;
+  animation: planetOrbit 10s linear infinite;
+  transform-origin: center;
+  z-index: 3;
+  transform: translate(-50%, -120px);
+}
+.star {
+  position: absolute;
+  color: #ffe5c6;
+  font-size: 22px;
+  opacity: 0.8;
+  animation: starTwinkle 3.8s ease-in-out infinite;
+}
+.star:nth-child(1) {
+  top: 12%;
+  left: 25%;
+  animation-delay: 0s;
+}
+.star:nth-child(2) {
+  top: 24%;
+  right: 18%;
+  animation-delay: 0.8s;
+}
+.star:nth-child(3) {
+  bottom: 22%;
+  left: 18%;
+  animation-delay: 1.6s;
+}
+.star:nth-child(4) {
+  bottom: 16%;
+  right: 24%;
+  animation-delay: 0.4s;
+}
+.star:nth-child(5) {
+  top: 50%;
+  left: 86%;
+  animation-delay: 2.5s;
+}
+@keyframes planetOrbit {
+  0% {
+    transform: rotate(0deg) translate(-50%, -120px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -120px) rotate(-360deg);
+  }
+}
+@keyframes moonPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 540px) {
+  .celestial-copy {
+    padding: 0 6px;
+  }
+  .celestial-copy h2 {
+    font-size: 2rem;
+  }
+  .celestial-orbit {
+    width: 280px;
+    height: 280px;
+  }
+}

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { memories, person, questions, reasons } from './content';
 import './critters.css';
+import './celestial.css';
 import floralPhoto from './assets/neha-floral.jpeg';
 import treePhoto from './assets/neha-under-tree.jpeg';
 import sunlightPhoto from './assets/neha-sunlight.jpeg';
+import meByTheSeaPhoto from './assets/me-by-the-sea.jpeg';
 
 const Sparkle = () => (
   <span className="sparkle" aria-hidden="true">
@@ -250,6 +252,58 @@ export default function App() {
             </p>
             <p>you became my person.</p>
             <p>And honestly, I don’t want this story to end at 30.</p>
+            <p>
+              <strong>Before You Came Into My Universe... 🌌</strong>
+            </p>
+            <p>
+              Before you, I was just a lonely planet drifting through my own
+              little universe.
+            </p>
+            <p>Then you came into my life, quietly becoming my gravity.</p>
+            <p>
+              Like the sun holds its planets in orbit, your presence started
+              pulling me closer, making my world feel warmer and brighter.
+            </p>
+            <p>You didn't just enter my universe...</p>
+            <p>
+              <strong>You became my moon. 🌙</strong>
+            </p>
+            <p>
+              The one I look for in the darkest nights, the one that makes my
+              lonely sky feel a little less empty. ❤️
+            </p>
+          </div>
+          <div
+            className="celestial-card"
+            aria-label="A celestial card with Neha as the moon and a tiny orbiting planet"
+          >
+            <div className="celestial-copy">
+              <h2>Final celestial card</h2>
+              <p>
+                Neha is the glowing moon at the center of this little universe,
+                and I’m the tiny planet happily pulled into her orbit.
+              </p>
+            </div>
+            <div className="celestial-orbit">
+              <div className="orbit-ring" aria-hidden="true" />
+              <div className="celestial-core">
+                <img
+                  className="central-moon"
+                  src={floralPhoto}
+                  alt="Neha as a glowing celestial moon"
+                />
+                <img
+                  className="orbit-planet"
+                  src={meByTheSeaPhoto}
+                  alt="A tiny planet orbiting the moon"
+                />
+              </div>
+              <span className="star">✦</span>
+              <span className="star">✧</span>
+              <span className="star">✦</span>
+              <span className="star">✧</span>
+              <span className="star">✦</span>
+            </div>
           </div>
           <div className="signature">
             always,
